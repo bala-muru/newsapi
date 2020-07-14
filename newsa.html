@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title of the document</title>
+</head>
+<body bgcolor="yellow">
+   <form action ="/weather1" method="post">
+      <input type="text" placeholder="search a keyword" name="keyword">
+      <button type="submit">Get News</button>
+   </form>
+   {% for post in result %}
+   <h3 style="color:red">{{post["title"]}}</h3>
+   <i>{{post["publishedAt"]}}</i>
+   <p>{{post["description"]}}</p>
+   {% endfor %}
+</body>
+</html>
